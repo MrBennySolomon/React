@@ -1,9 +1,9 @@
-import Box from './Box';
+import Increment from './Increment';
 function App() {
   
   return (
     <div className="App">
-      <Box btnText="show / hide" color="yellow"/>
+      <Increment counter='0'/>
     </div>
   );
 }
