@@ -11,13 +11,13 @@ function App() {
   return (
     <div>
       <input onChange={() => setCheckbox1(!checkbox1)} type='checkbox' checked={checkbox1}/>
-      <label>I read the term of the app</label>
+      <label>I read the term of the app</label><br/>
       <input onChange={() => setCheckbox2(!checkbox2)} type='checkbox' checked={checkbox2}/>
-      <label>I accept the term of the app</label>
+      <label>I accept the term of the app</label><br/>
       <input onChange={() => setCheckbox3(!checkbox3)} type='checkbox' checked={checkbox3}/>
-      <label>I want to get the weekly news letter</label>
+      <label>I want to get the weekly news letter</label><br/>
       <input onChange={() => setCheckbox4(!checkbox4)} type='checkbox' checked={checkbox4}/>
-      <label>I want to get sales and offers</label>
+      <label>I want to get sales and offers</label><br/>
     </div>
   );
 }
