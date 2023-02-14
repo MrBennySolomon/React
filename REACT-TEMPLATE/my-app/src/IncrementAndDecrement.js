@@ -7,14 +7,12 @@ const IncrementAndDecrement = (props) => {
   const decrementHandler = () => {
     if (counter > -10) {
       setCounter((prev) => prev - 1);
-      checkValue();
     }
     
   }
   const incrementHandler = () => {
     if (counter < 10) {
       setCounter((prev) => prev + 1); 
-      checkValue();
     }
   }
 
