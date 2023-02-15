@@ -1,12 +1,8 @@
-import React from 'react';
 import '../Box.css';
-class Box4 extends React.Component {
-  render() {
+const Box4 = () => {
     return (
-      <div classList='box4'>
-      </div>
-    );
+      <div className='box4'></div>
+    )
   }
-}
-
-export default Box4;
+  
+  export default Box4
