@@ -8,10 +8,6 @@ function App() {
   const [allNames, setAllNames] = useState(() => data.map((person) => person.name))
   const [bornBefore1990, setBornBefore1990] = useState(() => data.filter((person) => Number((person.birthday.split('-'))[2]) < 1990))
 
-  console.log(bornBefore1990);
-  //const getAllNames = (data) => data.map((person) => person.name);
-  //const getBornBefore1990 = (data) => data.map((person) => person.birthday.split('-')[2] < 1990);
-
   return (
     <div className='./App.css'>
       <Name names={allNames}/>
