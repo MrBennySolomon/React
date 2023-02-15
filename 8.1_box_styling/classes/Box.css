@@ -1,0 +1,27 @@
+.box1 {
+
+  background-color: lightseagreen;
+  width: 100vw;
+  height: 100vh;
+
+}
+.box2 {
+  background-color: lightskyblue;
+  width: 80vw;
+  height: 80vh;
+}
+.box3 {
+  background-color: lightsalmon;
+  width: 60vw;
+  height: 60vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.box4 {
+  background-color: lightpink;
+  width: 40vw;
+  height: 20vh;
+}
