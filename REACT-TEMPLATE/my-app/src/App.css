@@ -1,3 +1,11 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(67, 14, 113);
+
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -5,6 +13,10 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
+  font-size: 2rem;
+
+  background-color: rgb(67, 14, 113);
 }
 
 .App-logo {
@@ -68,4 +80,31 @@
   background-color: lightpink;
   width: 40vw;
   height: 20vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: green;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.errorMessage {
+  font-size: 2rem;
+  background-color: red;
+  color: white;
+}
+
+.toppings {
+  font-size: 2rem;
+  color: white;
 }
