@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { render } from 'react-dom';
 import './App.css';
 
 const img1 = 'https://images.pokemontcg.io/base1/24.png'
@@ -51,3 +50,44 @@ const App = () => {
 };
 
 export default App;
+
+
+// import React, { useRef } from 'react';
+
+// const ClassToggleOnMouseOver = ({primaryClass}) => {
+//   const classRef = useRef(null)
+
+//   return (
+//     <div
+//       onMouseOver={() => {
+//         classRef.current.classList.add("color")
+//       }}
+//       onMouseOut={() => {
+//         classRef.current.classList.remove("color")
+//       }}
+//       className = {primaryClass}
+//       ref={classRef}
+//     />
+//   )
+
+// }
+
+// const ClassChangeOnMouseOver = () => {
+//   return (
+//     <>
+//       <ClassToggleOnMouseOver primaryClass = {"one"} />
+//       <ClassToggleOnMouseOver primaryClass = {"two"} />
+//     </>
+//   )
+// }
+
+
+
+// const App = () => {
+
+//   return (
+//       <ClassChangeOnMouseOver/>
+//   )
+// }
+
+// export default App;
