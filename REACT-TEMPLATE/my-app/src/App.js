@@ -5,6 +5,7 @@ import ProductsPage from './pages/Products';
 import Root from './pages/Root'
 import data from './store';
 import Product from './pages/Product'
+import Error from './pages/Error';
 
 
 
@@ -12,23 +13,16 @@ const router = createBrowserRouter([
   {
     path: '/', 
     element: <Root/>,
-
+    errorElement: <Error/>,
   children: [
-    {path: '/', element: <HomePage/>},
-    {path: '/products', element: <ProductsPage/>},
-    {path: '/products/1', element: <Product id='1' data={data}/>},
-    {path: '/products/2', element: <Product id='2' data={data}/>},
-    {path: '/products/3', element: <Product id='3' data={data}/>},
-    {path: '/products/4', element: <Product id='4' data={data}/>},
-
+    {path: '/'          , element: <HomePage/>},
+    {path: '/products/'  , element: <ProductsPage/>},
+    {path: '/products/:id', element: <Product data={data}/>}
   ],
   },
 ]);
 
 const App = () => {
-
-
-  
   return (
         <RouterProvider router={router} />
   )
