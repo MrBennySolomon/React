@@ -1,0 +1,14 @@
+/* Project app specific css */
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
