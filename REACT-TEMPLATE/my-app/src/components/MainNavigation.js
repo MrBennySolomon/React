@@ -5,7 +5,6 @@ import classes from '../styles/MainNavigation.modules.css';
 
 const MainNavigation = () => {
   return (
-
       <nav>
         <ul className={classes.list}>
           <li>

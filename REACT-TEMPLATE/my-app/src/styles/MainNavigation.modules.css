@@ -28,8 +28,8 @@ ul {
   color: yellowgreen;
 }
 
-.list a:hover,
-.list a.active {
+a:hover,
+a.active {
   text-decoration: underline;
   color: coral;
 }
