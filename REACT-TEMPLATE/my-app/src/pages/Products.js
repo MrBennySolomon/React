@@ -1,24 +1,22 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import React from 'react'
+import data from '../../src/store';
 
 const Products = () => {
-  const navigate = useNavigate();
+  //const [products, setProducts] = useState([]);
 
-  function navigateHandler() {
-    navigate('/');
-  }
+  useEffect(() => {
+    //setProducts(data);
+  }, []);
 
 
   return (
     <>
+
       <h1>Products Page</h1>
-      {/* <p>
-        Go To <Link to='/'>go to home page</Link>
-      </p>
-      <p>
-        <button onClick={navigateHandler}>Navigate</button>
-      </p> */}
+      {data.map((item) => <Link key={item.id} to={`/products/${item.id}`}>{item.title}</Link>)}
     </>
     
   )
