@@ -1,30 +1,56 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import HomePage from './pages/Home';
-import ProductsPage from './pages/Products';
-import Root from './pages/Root'
-import data from './store';
-import Product from './pages/Product'
-import Error from './pages/Error';
+import React, { useEffect, useState } from "react";
 
+import "./styles/style.css";
 
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+  const [newTodoText, setNewTodoText] = useState("");
 
-const router = createBrowserRouter([
-  {
-    path: '/', 
-    element: <Root/>,
-    errorElement: <Error/>,
-  children: [
-    {path: '/'          , element: <HomePage/>},
-    {path: '/products/'  , element: <ProductsPage/>},
-    {path: '/products/:id', element: <Product data={data}/>}
-  ],
-  },
-]);
+  useEffect(() => {
+    const data = localStorage.getItem("todos");
+    if (data) {
+      setTodos(JSON.parse(data));
+    }
+  }, []);
 
-const App = () => {
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  const addTodo = () => {
+    setTodos((todos) => [...todos, { id: Date.now(), text: newTodoText }]);
+    setNewTodoText("");
+  };
+
+  const handleNewTodoTextChange = (event) => {
+    setNewTodoText(event.target.value);
+  };
+
+  const handleDeleteTodo = (id) => {
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
+  };
+
   return (
-        <RouterProvider router={router} />
-  )
+    <div className="App">
+      <h1>Todo List</h1>
+      <div className="add-todo">
+        <input
+          type="text"
+          value={newTodoText}
+          onChange={handleNewTodoTextChange}
+          placeholder="Enter new todo"
+        />
+        <button onClick={addTodo}>Add Todo</button>
+      </div>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id} onClick={() => handleDeleteTodo(todo.id)}>
+            {todo.text}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
-export default App;
+
+export default TodoList;
