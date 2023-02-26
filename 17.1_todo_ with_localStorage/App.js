@@ -44,8 +44,8 @@ function TodoList() {
       </div>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id} onClick={() => handleDeleteTodo(todo.id)}>
-            {todo.text}
+          <li key={todo.id}>
+            <label><input type='checkbox'/>{todo.text}</label><button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
