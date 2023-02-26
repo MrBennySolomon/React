@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-todo {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+  border: solid 1px black;
+  text-align: left;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input {
+  margin-right: 5px;
+}
