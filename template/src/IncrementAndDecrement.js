@@ -1,7 +1,7 @@
-import { Component } from 'react'
+import React from 'react'
 import './IncrementAndDecrement.css';
 
-class IncrementAndDecrement extends Component {
+class IncrementAndDecrement extends React.Component {
 
   constructor () {
     super();
@@ -10,19 +10,23 @@ class IncrementAndDecrement extends Component {
     };
   }
 
-  decrementHandler () {
+  decrementHandler = () => {
     if (this.state.counter > -10) {
-      this.setState({counter: -1})
+      this.setState({
+        counter: this.state.counter - 1,
+      });
     }
   }
 
-  incrementHandler () {
+  incrementHandler = () => {
     if (this.state.counter < 10) {
-      this.setState({counter: 1})
+      this.setState({
+        counter: this.state.counter + 1,
+      });
     }
   }
 
-  checkValue () {
+  checkValue = () => {
     if (this.state.counter > 0)   return this.props.positive
     if (this.state.counter < 0)   return this.props.negative;
     if (this.state.counter === 0) return this.props.zero;
@@ -40,40 +44,5 @@ class IncrementAndDecrement extends Component {
 }
 
 export default IncrementAndDecrement;
-
-// const IncrementAndDecrement = (props) => {
-//   const [counter, setCounter] = useState(0);
-
-//   const decrementHandler = () => {
-//     if (counter > -10) {
-//       setCounter((prev) => prev - 1);
-//     }
-    
-//   }
-//   const incrementHandler = () => {
-//     if (counter < 10) {
-//       setCounter((prev) => prev + 1); 
-//     }
-//   }
-
-//   const checkValue = () => {
-//     if (counter > 0) {
-//       return props.positive
-//     }else if (counter < 0) {
-//       return props.negative;
-//     }else{
-//       return props.zero;
-//     }
-//   }
-
-//   return (
-
-//     <>
-//       <button onClick={decrementHandler}>-</button>
-//       <label className={checkValue()}>{counter}</label>
-//       <button onClick={incrementHandler}>+</button>
-//     </>
-//   )
-// }
 
 // export default IncrementAndDecrement
