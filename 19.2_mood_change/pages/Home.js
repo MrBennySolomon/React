@@ -5,12 +5,10 @@ import { useGlobalContext } from '../context/context';
 
 const Home = () => {
   const {isDarkMode} = useGlobalContext();
+  document.body.style.backgroundColor = isDarkMode ? '#333' : 'lightgray';
 
   return (
-    <>
       <h1 className={isDarkMode ? 'h1-dark' : 'h1-light'}>Home Page</h1>
-      <div className={isDarkMode ? 'home-con-dark' : 'home-con-light'}></div>
-    </>
     )
 }
 export default Home;
