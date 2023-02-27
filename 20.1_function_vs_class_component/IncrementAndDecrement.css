@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.zero {
+  background-color: black;
+  color: white;
+}
+
+.positive {
+  background-color: greenyellow;
+  color: white;
+}
+
+.negative {
+  background-color: red;
+  color: white;
+}
+
+button,
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 20vw;
+  height: 20vh;
+
+  font-size: 4rem;
+}

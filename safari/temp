@@ -1,0 +1,30 @@
+// function App () {
+//   const [image, setImage] = useState('');
+
+//   const handleImage = (e) => {
+//     console.log(e.target.files);
+//     setImage(e.target.files[0]);
+//   }
+
+//   const handleApi = () => {
+//     const formData = new FormData();
+//     formData.append('X-Api-Key', 'DhbRv3iIllxcde/eesndew==kE4cb7cxv2pVoBia');
+//     formData.append('enctype', 'Dmultipart/form-data');
+//     formData.append('processData', false);
+//     formData.append('contentType', false);
+//     formData.append('image', image);
+    //formData.headers.push({'X-Api-Key': 'DhbRv3iIllxcde/eesndew==kE4cb7cxv2pVoBia'});
+    // axios.post('https://api.api-ninjas.com/v1/imagetotext', formData).then((res) => {
+    //   console.log(res);
+    // })
+
+    // const request = new XMLHttpRequest();
+    // request.open('POST', 'https://api.api-ninjas.com/v1/imagetotext');
+    // request.send(formData);
+
+  //   return  (
+  //   <div>
+  //     <input type="file" name='file' onChange={handleImage}/>
+  //     <button onClick={handleApi}>Submit</button>
+  //   </div>
+  // )

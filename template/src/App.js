@@ -1,9 +1,12 @@
-import React from 'react'
+import './App.css';
+import IncrementAndDecrement from './IncrementAndDecrement';
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div className="App">
+      <IncrementAndDecrement counter='0' zero='zero' positive='positive' negative='negative'/>
+    </div>
+  );
 }
 
-export default App
+export default App;
